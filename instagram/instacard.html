@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <style>
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    
+    .username {
+      text-decoration: none;
+      color: black;
+      font-weight: 1000;
+    }
+
+    .username:hover {
+      text-decoration: underline;
+      color: black;
+    }
+
+    .social {
+      font-size: 25px;
+    }
+
+    .post-description {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .dot,
+    .sav,
+    .comment-heart,
+    .postcomment {
+      float: right;
+    }
+
+    .na-icon {
+      height: 25px;
+      border-radius: 50%;
+    }
+
+    .navbar-nav {
+      margin-right: 150px;
+    }
+
+    .inputwithicon i {
+      position: absolute;
+      left: 450px;
+      top: 31px;
+
+    }
+
+    .inputwithicon {
+      margin-left: 230px;
+    }
+
+    .postcomment {
+      color: #0095f6;
+      text-decoration: none;
+    }
+
+    .postcomment:hover {
+      color: #0095f6 !important;
+    }
+
+    .comnt {
+      border: none;
+      padding-left: 15px;
+    }
+
+    .cmnt:active {
+      border: none;
+    }
+    i,
+    .na-icon {
+      cursor: pointer;
+    }
+    @media screen and (max-width: 600px) {
+       .inputwithicon, .navbar-nav{
+         display: none;
+       }
+       .brand{
+         position: relative;
+        left:10%; 
+       }
+    }
+    </style>
+
+
+  <div class="card">
+    <nav class="navbar navbar-expand m-sm-0">
+      <div class="container-fluid">
+        <a href=""><img src="images/logo.png" class="brand"  style="margin-left: 80px;"></a>
+
+        <div class="inputwithicon">
+          <input type="text" placeholder="           search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </div>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item p-3">
+            <i class="fas fa-home social"></i>
+          </li>
+          <li class="nav-item p-3">
+            <i class="fab fa-facebook-messenger social"></i>
+          </li>
+          <li class="nav-item p-3">
+            <i class="fas fa-compass social"></i>
+          </li>
+          <li class="nav-item p-3">
+            <i class="fas fa-heart social"></i>
+          </li>
+          <li class="nav-item p-3">
+            <img src="images/mypic.png" class="na-icon">
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 pt-5">
+        <div class="card text-left shadow-lg">
+          <div class="p-2">
+            <a href="https://instagram.com/suraj__712">
+              <img src="images/mypic.png" class="avatar mt-1" alt="my profile picture"></a>
+            <a href="https://instagram.com/suraj__712" class=" mx-2 username">suraj__712</a>
+            <i class="fas fa-ellipsis-h dot pt-3"></i>
+          </div>
+          <img src="images/post1.jpg" alt="" class="img-fluid mt-2">
+
+
+          <div class="px-2">
+            <i class="far fa-heart p-2 social"></i>
+            <i class="far fa-comment p-2 social"></i>
+            <i class="far fa-paper-plane social p-2"></i>
+            <i class="far fa-bookmark social sav p-2"></i>
+            <p><strong>12,701,201 likes</strong></p>
+            <a class="username post-description" href="https://instagram.com/suraj__712">suraj__712</a>
+            <p class="post-description">
+              Life is like riding a bicycle. To keep your life balance, you must keep moving.
+            </p>
+            <p class="text-muted post-description">view all 12560 comments</p>
+            <p class="post-description"><a class="username" href="https://instagram.com/zuck">zuck<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="17" height="18"
+              viewBox="0 0 48 48"
+              style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 💯😍💫 <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="post-description"><a class="username"
+                href="https://www.instagram.com/thisisbillgates/">thisisbillgates<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="17" height="18"
+                viewBox="0 0 48 48"
+                style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> yes, thats true. <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="text-muted">JUNE 27, 2021</p>
+            <p class="pt-2 "><i class="far fa-smile social"></i><input type="text" class="comnt"
+                placeholder="Add a comment..."><a href="" class="postcomment">Post</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 pt-5">
+        <div class="card text-left shadow-lg">
+          <div class="p-2">
+            <a href="https://instagram.com/suraj__712">
+              <img src="images/mypic.png" class="avatar mt-1" alt="my profile picture"></a>
+            <a href="https://instagram.com/suraj__712" class=" mx-2 username">suraj__712</a>
+            <i class="fas fa-ellipsis-h dot pt-3"></i>
+          </div>
+          <img src="images/post5.jpg" alt="" class="img-fluid mt-2">
+
+
+          <div class="px-2">
+            <i class="far fa-heart p-2 social"></i>
+            <i class="far fa-comment p-2 social"></i>
+            <i class="far fa-paper-plane social p-2"></i>
+            <i class="far fa-bookmark social sav p-2"></i>
+            <p><strong>12,731,197 likes</strong></p>
+            <a class="username post-description" href="https://instagram.com/suraj__712">suraj__712</a>
+            <p class="post-description">
+              "It doesn't matter whether you come in first, in the middle of the pack, or last. You can say, 'I have finished.' There is a lot of satisfaction in that."
+            </p>
+            <p class="text-muted post-description">view all 47850 comments</p>
+            <p class="post-description"><a class="username" href="https://www.instagram.com/jeffbezos/">jeffbezos<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="17" height="18"
+              viewBox="0 0 48 48"
+              style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> This is 100% true <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="post-description"><a class="username"
+                href="https://www.instagram.com/justinbieber/">justinbieber<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="17" height="18"
+                viewBox="0 0 48 48"
+                style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 👏👍🙌 <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="text-muted">JUNE 26, 2021</p>
+            <p class="pt-2 "><i class="far fa-smile social"></i><input type="text" class="comnt"
+                placeholder="Add a comment..."><a href="" class="postcomment">Post</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 pt-5">
+        <div class="card text-left shadow-lg">
+          <div class="p-2">
+            <a href="https://instagram.com/suraj__712">
+              <img src="images/mypic.png" class="avatar mt-1" alt="my profile picture"></a>
+            <a href="https://instagram.com/suraj__712" class=" mx-2 username">suraj__712</a>
+            <i class="fas fa-ellipsis-h dot pt-3"></i>
+          </div>
+          <img src="images/post3.jpeg" alt="" class="img-fluid mt-2">
+
+
+          <div class="px-2">
+            <i class="far fa-heart p-2 social"></i>
+            <i class="far fa-comment p-2 social"></i>
+            <i class="far fa-paper-plane social p-2"></i>
+            <i class="far fa-bookmark social sav p-2"></i>
+            <p><strong>7,127,201 likes</strong></p>
+            <a class="username post-description" href="https://instagram.com/suraj__712">suraj__712</a>
+            <p class="post-description">
+              Nothing is more creative... nor destructive... than a brilliant mind with a purpose.
+            </p>
+            <p class="text-muted post-description">view all 36879 comments</p>
+            <p class="post-description"><a class="username" href="https://www.instagram.com/selenagomez/">selenagomez<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="17" height="18"
+              viewBox="0 0 48 48"
+              style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 😁😇😍<i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="post-description"><a class="username"
+                href="https://www.instagram.com/arianagrande/">arianagrande<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="17" height="18"
+                viewBox="0 0 48 48"
+                style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 🥰🥰👍 <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="text-muted">JUNE 25, 2021</p>
+            <p class="pt-2 "><i class="far fa-smile social"></i><input type="text" class="comnt"
+                placeholder="Add a comment..."><a href="" class="postcomment">Post</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 pt-5">
+        <div class="card text-left shadow-lg">
+          <div class="p-2">
+            <a href="https://instagram.com/suraj__712">
+              <img src="images/mypic.png" class="avatar mt-1" alt="my profile picture"></a>
+            <a href="https://instagram.com/suraj__712" class=" mx-2 username">suraj__712</a>
+            <i class="fas fa-ellipsis-h dot pt-3"></i>
+          </div>
+          <img src="images/post4.jpg" alt="" class="img-fluid mt-2">
+
+
+          <div class="px-2">
+            <i class="far fa-heart p-2 social"></i>
+            <i class="far fa-comment p-2 social"></i>
+            <i class="far fa-paper-plane social p-2"></i>
+            <i class="far fa-bookmark social sav p-2"></i>
+            <p><strong>8,684,325 likes</strong></p>
+            <a class="username post-description" href="https://instagram.com/suraj__712">suraj__712</a>
+            <p class="post-description">
+              “Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.”
+            </p>
+            <p class="text-muted post-description">view all 58962 comments</p>
+            <p class="post-description"><a class="username" href="https://www.instagram.com/shawnmendes/">shawnmendes<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="17" height="18"
+              viewBox="0 0 48 48"
+              style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 🌝💫✨🔥<i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="post-description"><a class="username"
+                href="https://www.instagram.com/billieeilish/">billieeilish<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="17" height="18"
+                viewBox="0 0 48 48"
+                style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 🤗✌️💯 <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="text-muted">JUNE 24, 2021</p>
+            <p class="pt-2 "><i class="far fa-smile social"></i><input type="text" class="comnt"
+                placeholder="Add a comment..."><a href="" class="postcomment">Post</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 pt-5">
+        <div class="card text-left shadow-lg">
+          <div class="p-2">
+            <a href="https://instagram.com/suraj__712">
+              <img src="images/mypic.png" class="avatar mt-1" alt="my profile picture"></a>
+            <a href="https://instagram.com/suraj__712" class=" mx-2 username">suraj__712</a>
+            <i class="fas fa-ellipsis-h dot pt-3"></i>
+          </div>
+          <img src="images/post2.jpg" alt="" class="img-fluid mt-2">
+
+
+          <div class="px-2">
+            <i class="far fa-heart p-2 social"></i>
+            <i class="far fa-comment p-2 social"></i>
+            <i class="far fa-paper-plane social p-2"></i>
+            <i class="far fa-bookmark social sav p-2"></i>
+            <p><strong>5,256,528 likes</strong></p>
+            <a class="username post-description" href="https://instagram.com/suraj__712">suraj__712</a>
+            <p class="post-description">
+              “For each new morning let there be flow of love. Let there be light of happiness in every direction.”
+            </p>
+            <p class="text-muted post-description">view all 36451 comments</p>
+            <p class="post-description"><a class="username" href="https://www.instagram.com/google/">google<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+              width="17" height="18"
+              viewBox="0 0 48 48"
+              style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 🤗🙌👏 <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="post-description"><a class="username"
+                href="https://www.instagram.com/instagram/">instagram<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="17" height="18"
+                viewBox="0 0 48 48"
+                style=" fill:#000000;"><polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon></svg></a> 😄😁🥳 <i
+                class="far fa-heart comment-heart"></i>
+            </p>
+            <p class="text-muted">JUNE 23, 2021</p>
+            <p class="pt-2 "><i class="far fa-smile social"></i><input type="text" class="comnt"
+                placeholder="Add a comment..."><a href="" class="postcomment">Post</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="footer py-5 text-center">
+    <div>
+      <h6 class="">Instagram cards clone by <a class="username" href="https://instagram.com/suraj__712">suraj</a>
+      </h6>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
